@@ -18,4 +18,24 @@ module.exports = {
 
     res.send({ success: true, message: '' });
   },
+  login: async (req, res) => {
+    const { username, password } = req.body;
+    const userExists = await userSchema.findOne({ username });
+
+    // console.log(userExists);
+    if (!userExists)
+      return res.send({ success: false, message: 'Bad credentials' });
+    const passMatch = await bcrypt.compare(password, userExists.password);
+
+    // console.log(passMatch);
+    if (!passMatch)
+      return res.send({ success: false, message: 'Bad credentials' });
+
+    return res.send({
+      success: true,
+      message: '',
+      secret: userExists.secret,
+      username: userExists.username,
+    });
+  },
 };

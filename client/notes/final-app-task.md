@@ -1,6 +1,8 @@
 React.Js Node.Js App Final Project
 Due April 17, 2023 11:59 PM
+
 Instructions
+
 // Functionality:
 
 Register Page:
@@ -36,10 +38,8 @@ Register
 Login
 
 [x]user login with his credentials (username, password)
-[]If user does not exist, message should be displayed
-
-[]When user logs in he is navigated to Profile page
-
+[x]If user does not exist, message should be displayed
+[X]When user logs in he is navigated to Profile page
 []When user logs in Toolbar should show three more links - Profile and All Users and Conversations
 
 Profile
