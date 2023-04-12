@@ -1,0 +1,61 @@
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 50px;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navigation-bar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navigation-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Login - Register Pages */
+.log-reg-page {
+  padding-top: 50px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+input[type='text'] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
