@@ -4,7 +4,7 @@ Instructions
 // Functionality:
 
 Register Page:
-[]Create user (register)
+[x]Create user (register)
 Login Page:
 []Login with existing user
 Profile:
@@ -26,12 +26,12 @@ Register
 
 [x]page in which user are registered. New user should provide his username, two passwords
 
-[]Validate these fields:
-[]username - min length 4, max length 20
-[]password - min 4, max 20, upper case letter should be included, special symbol should be included (!@#$%^&\*\_+)
-[]two users with same username can't be registered
-[]Make sure validation errors is displayed
-[]When user is registered successfully, he is navigated to login page
+[X]Validate these fields:
+[x]username - min length 4, max length 20
+[x]password - min 4, max 20, upper case letter should be included, special symbol should be included (!@#$%^&\*\_+)
+[x]two users with same username can't be registered
+[x]Make sure validation errors is displayed
+[X]When user is registered successfully, he is navigated to login page
 
 Login
 
