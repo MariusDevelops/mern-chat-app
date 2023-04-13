@@ -4,7 +4,7 @@ const userSchema = require('../schemas/userSchema');
 
 module.exports = {
   register: async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, imageUrl } = req.body;
 
     const hashedPass = await bcrypt.hash(password, 10);
 
@@ -12,6 +12,7 @@ module.exports = {
       secret: uid.uid(),
       username,
       password: hashedPass,
+      imageUrl, // Add the imageUrl field to the user object
     });
 
     await userInDb.save();
@@ -36,6 +37,25 @@ module.exports = {
       message: '',
       secret: userExists.secret,
       username: userExists.username,
+      imageUrl: userExists.imageUrl, // Add the imageUrl field to the response object
     });
+  },
+  updatePhoto: async (req, res) => {
+    const { secret, imageUrl } = req.body;
+
+    // Find the user by secret
+    const user = await userSchema.findOne({ secret });
+    if (!user) {
+      return res
+        .status(404)
+        .send({ success: false, message: 'User not found' });
+    }
+
+    // Update the user's imageUrl field
+    user.imageUrl = imageUrl;
+    await user.save();
+
+    // Return the updated user object
+    res.send({ success: true, message: '', user });
   },
 };
