@@ -12,9 +12,15 @@ const dataSlice = createSlice({
     setAllUsers: (state, action) => {
       state.allUsers = action.payload;
     },
+    // setUser: (state, action) => {
+    //   state.myUser = action.payload;
+    //   state.currentUser = action.payload;
+    //   state.isLoggedIn = true;
+    // },
     setUser: (state, action) => {
-      state.myUser = action.payload;
-      state.currentUser = action.payload;
+      const { secret, username, imageUrl } = action.payload;
+      state.myUser = { secret, username };
+      state.currentUser = { secret, username, imageUrl };
       state.isLoggedIn = true;
     },
     clearUser: (state) => {

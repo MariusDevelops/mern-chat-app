@@ -4,10 +4,12 @@ const {
   register,
   login,
   updatePhoto,
+  getUserImage,
 } = require('../controllers/authController');
 
 router.post('/register', register);
 router.post('/login', login);
-router.post('/updatePhoto', updatePhoto); // Add this line to create a new route for updating the user's photo
+router.post('/updatePhoto', updatePhoto);
+router.get('/getUserImage/:secret', getUserImage);
 
 module.exports = router;

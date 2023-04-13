@@ -8,9 +8,9 @@ Instructions
 Register Page:
 [x]Create user (register)
 Login Page:
-[]Login with existing user
+[X]Login with existing user
 Profile:
-[]Update logged user photo
+[X]Update logged user photo
 []Update logged user name
 []Update Logged User password
 All Users Page:
@@ -44,7 +44,7 @@ Login
 
 Profile
 
-[]in this page user can change his profile picture
+[X]in this page user can change his profile picture
 []in this page user can change his password
 []in this page user can see his username (can't change if name is already used)
 

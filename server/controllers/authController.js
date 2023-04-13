@@ -58,4 +58,18 @@ module.exports = {
     // Return the updated user object
     res.send({ success: true, message: '', user });
   },
+  getUserImage: async (req, res) => {
+    const secret = req.params.secret;
+    const user = await userSchema.findOne({ secret });
+
+    if (!user) {
+      return res
+        .status(404)
+        .send({ success: false, message: 'User not found' });
+    }
+
+    const imageUrl = user.imageUrl;
+
+    res.send({ success: true, message: '', imageUrl });
+  },
 };
