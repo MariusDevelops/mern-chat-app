@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../features/data';
+import { setUser } from '../features/dataSlice';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
