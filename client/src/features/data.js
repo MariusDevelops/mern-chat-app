@@ -1,23 +1,51 @@
+// import { createSlice } from '@reduxjs/toolkit';
+
+// export const dataSlice = createSlice({
+//   name: 'user',
+//   initialState: {
+//     value: {
+//       myUser: null,
+//       allUsers: [],
+//     },
+//   },
+//   reducers: {
+//     setAllUsers: ({ value }, { payload }) => {
+//       value.allUsers = payload;
+//     },
+//     setUser: ({ value }, { payload }) => {
+//       value.myUser = payload;
+//     },
+//   },
+// });
+
+// export const { setAllUsers, setUser } = dataSlice.actions;
+
+// export default dataSlice.reducer;
+
 import { createSlice } from '@reduxjs/toolkit';
 
-export const dataSlice = createSlice({
-  name: 'user',
+const dataSlice = createSlice({
+  name: 'data',
   initialState: {
-    value: {
-      myUser: null,
-      allUsers: [],
-    },
+    myUser: null,
+    allUsers: [],
+    isLoggedIn: false,
   },
   reducers: {
-    setAllUsers: ({ value }, { payload }) => {
-      value.allUsers = payload;
+    setAllUsers: (state, action) => {
+      state.allUsers = action.payload;
     },
-    setUser: ({ value }, { payload }) => {
-      value.myUser = payload;
+    setUser: (state, action) => {
+      state.myUser = action.payload;
+      state.isLoggedIn = true;
+    },
+    clearUser: (state) => {
+      state.myUser = null;
+      state.isLoggedIn = false;
     },
   },
 });
 
-export const { setAllUsers, setUser } = dataSlice.actions;
+export const { setAllUsers, setUser, clearUser } = dataSlice.actions;
 
 export default dataSlice.reducer;

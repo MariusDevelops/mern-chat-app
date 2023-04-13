@@ -40,7 +40,7 @@ Login
 [x]user login with his credentials (username, password)
 [x]If user does not exist, message should be displayed
 [X]When user logs in he is navigated to Profile page
-[]When user logs in Toolbar should show three more links - Profile and All Users and Conversations
+[X]When user logs in Toolbar should show three more links - Profile and All Users and Conversations
 
 Profile
 
