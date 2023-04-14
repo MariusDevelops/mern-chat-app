@@ -50,7 +50,7 @@ Profile
 
 All users
 
-[]in this page all users is shown in list
+[X]in this page all users is shown in list
 []each user card should have username, user photo
 []when user card is clicked it should navigate to this particular user profile
 

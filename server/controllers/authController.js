@@ -72,4 +72,13 @@ module.exports = {
 
     res.send({ success: true, message: '', imageUrl });
   },
+  getAllUsers: async (req, res) => {
+    try {
+      const allUsers = await userSchema.find();
+      res.send(allUsers);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send({ success: false, message: 'Server error' });
+    }
+  },
 };
