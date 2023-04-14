@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAllUsers } from '../features/dataSlice';
+import { Link } from 'react-router-dom';
 
 // UserCard component
 const UserCard = ({ user }) => {
+  const { username, imageUrl } = user;
+
   return (
-    <div>
-      <img src={user.imageUrl} alt={user.username} height="100" />
-      <h3>{user.username}</h3>
-    </div>
+    <Link to={`/user/${username}`}>
+      <div className="user-card">
+        <img src={imageUrl} alt={`${username}'s profile`} />
+        <h3>{username}</h3>
+      </div>
+    </Link>
   );
 };
 
@@ -30,7 +35,7 @@ const AllUsersPage = () => {
   return (
     <div>
       <h1>All Users</h1>
-      <div>
+      <div className="user-list">
         {allUsers.map((user) => (
           <UserCard key={user.secret} user={user} />
         ))}

@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import AllUsersPage from './pages/AllUsersPage';
 import ConversationsPage from './pages/ConversationsPage';
+import UserProfilePage from './pages/UserProfilePage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/allusers" element={<AllUsersPage />} />
           <Route path="/conversations" element={<ConversationsPage />} />
+          <Route path="/user/:username" element={<UserProfilePage />} />
         </Routes>
       </BrowserRouter>
     </div>

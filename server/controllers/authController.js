@@ -81,4 +81,25 @@ module.exports = {
       res.status(500).send({ success: false, message: 'Server error' });
     }
   },
+  getUserProfile: async (req, res) => {
+    const username = req.params.username;
+    const user = await userSchema.findOne({ username });
+
+    if (!user) {
+      return res
+        .status(404)
+        .send({ success: false, message: 'User not found' });
+    }
+
+    res.send({
+      success: true,
+      message: '',
+      user: {
+        id: user._id,
+        username: user.username,
+        imageUrl: user.imageUrl,
+        secret: user.secret,
+      },
+    });
+  },
 };

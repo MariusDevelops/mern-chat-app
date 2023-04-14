@@ -14,9 +14,9 @@ Profile:
 []Update logged user name
 []Update Logged User password
 All Users Page:
-[]Preview All users in app
+[x]Preview All users in app
 Single User Profile:
-[]Preview single user profile
+[x]Preview single user profile
 []Send message to other users
 Conversations Page:
 []Preview all conversations
@@ -52,11 +52,11 @@ All users
 
 [X]in this page all users is shown in list
 [X]each user card should have username, user photo
-[]when user card is clicked it should navigate to this particular user profile
+[x]when user card is clicked it should navigate to this particular user profile
 
 Particular user profile /user/:username
 
-[]in this page user info is shown - username, photo
+[x]in this page user info is shown - username, photo
 []in from this page you can send message to user
 
 Conversations (link should show how many active conversations you have)

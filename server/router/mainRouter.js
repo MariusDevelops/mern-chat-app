@@ -6,6 +6,7 @@ const {
   updatePhoto,
   getUserImage,
   getAllUsers,
+  getUserProfile,
 } = require('../controllers/authController');
 
 router.post('/register', register);
@@ -15,5 +16,6 @@ router.post('/updatePhoto', updatePhoto);
 router.get('/getUserImage/:secret', getUserImage);
 
 router.get('/allUsers', getAllUsers); // add this route
+router.get('/user/:username', getUserProfile);
 
 module.exports = router;
