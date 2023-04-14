@@ -2,6 +2,16 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAllUsers } from '../features/dataSlice';
 
+// UserCard component
+const UserCard = ({ user }) => {
+  return (
+    <div>
+      <img src={user.imageUrl} alt={user.username} height="100" />
+      <h3>{user.username}</h3>
+    </div>
+  );
+};
+
 const AllUsersPage = () => {
   const dispatch = useDispatch();
   const allUsers = useSelector((state) => state.data.allUsers);
@@ -20,13 +30,11 @@ const AllUsersPage = () => {
   return (
     <div>
       <h1>All Users</h1>
-      <ul>
+      <div>
         {allUsers.map((user) => (
-          <li key={user.secret}>
-            {user.username} ({user.secret})
-          </li>
+          <UserCard key={user.secret} user={user} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
