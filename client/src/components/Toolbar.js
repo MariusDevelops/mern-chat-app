@@ -5,6 +5,7 @@ import { clearUser } from '../features/dataSlice';
 
 const Toolbar = () => {
   const isLoggedIn = useSelector((state) => state.data.isLoggedIn);
+  const user = useSelector((state) => state.data.myUser);
 
   const dispatch = useDispatch();
 
@@ -29,6 +30,7 @@ const Toolbar = () => {
         )}
         {!isLoggedIn && <Link to="/login">Login</Link>}
       </div>
+      <div>{user?.username}</div>
     </div>
   );
 };
