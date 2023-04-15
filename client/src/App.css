@@ -64,3 +64,95 @@ button:hover {
 img {
   height: 200px;
 }
+
+/* Lecture CSS */
+/* body {
+    padding: 50px;
+} */
+
+.d-flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.column {
+  flex-direction: column;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grow2 {
+  flex: 2;
+}
+
+.m-3 {
+  margin: 30px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.toolbar a {
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.userCart {
+  padding: 10px;
+  background-color: #eeeeee;
+  margin: 5px;
+}
+
+.container {
+  width: 900px;
+}
+
+.singleConvo {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #eeeeee;
+}
+
+.chatWindow {
+  height: 600px;
+}
+
+.chatWindow {
+  background-color: #f8f8f8;
+}
+
+.chatTable {
+  overflow: auto;
+}
+
+.chatBottom input {
+  padding: 10px;
+  width: 90%;
+}
+
+.singleMessage {
+  padding: 5px;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid black;
+}

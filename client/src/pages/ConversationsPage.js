@@ -1,7 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import SingleConversatonCard from '../components/SingleConversatonCard';
 
-const ConversationsPage = () => {
-  return <div>ConversationsPage</div>;
+const ConversationPage = () => {
+  const myUser = useSelector((state) => state.data.myUser);
+
+  const [convos, setConvos] = useState([]);
+
+  useEffect(() => {
+    const data = {
+      secret: myUser.secret,
+      username: myUser.username,
+    };
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch('http://localhost:3007/getConversations', options)
+      .then((res) => res.json())
+      .then((data) => {
+        setConvos(data.conversations);
+        console.log(data);
+      });
+  }, [myUser.secret, myUser.username]);
+
+  return (
+    <div className="d-flex j-center">
+      <div className="container">
+        {convos.map((x, i) => (
+          <SingleConversatonCard item={x} key={i} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default ConversationsPage;
+export default ConversationPage;
