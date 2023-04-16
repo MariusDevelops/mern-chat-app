@@ -19,7 +19,7 @@ Single User Profile:
 [x]Preview single user profile
 []Send message to other users
 Conversations Page:
-[]Preview all conversations
+[x]Preview all conversations
 []Delete conversation
 
 // Pages
@@ -61,8 +61,8 @@ Particular user profile /user/:username
 
 Conversations (link should show how many active conversations you have)
 
-[]in this page you can see all conversations you having
-[]when someone sends you new message it appears in this page as new conversation
+[x]in this page you can see all conversations you having
+[x]when someone sends you new message it appears in this page as new conversation
 []user should be able to delete conversation (delete it for both users)
 []in this page you can open one of conversations to send message (or open conversation in new route like /chat/:conversationId)
 

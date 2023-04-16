@@ -8,6 +8,7 @@ import ProfilePage from './pages/ProfilePage';
 import AllUsersPage from './pages/AllUsersPage';
 import ConversationsPage from './pages/ConversationsPage';
 import UserProfilePage from './pages/UserProfilePage';
+import ChatPage from './pages/ChatPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/allusers" element={<AllUsersPage />} />
           <Route path="/conversations" element={<ConversationsPage />} />
           <Route path="/user/:username" element={<UserProfilePage />} />
+          <Route path="/chat/:id" element={<ChatPage />} />
         </Routes>
       </BrowserRouter>
     </div>
