@@ -46,11 +46,28 @@ module.exports = {
       username,
       message,
       time: Date.now(),
+      likes: 0,
     };
 
     const conversation = await conversationDb.findOneAndUpdate(
       { _id: id },
       { $push: { messages: newMessage } },
+      { new: true }
+    );
+
+    res.send({ success: true, conversation });
+  },
+  likeMessage: async (req, res) => {
+    const { id, index } = req.params;
+
+    const conv = await conversationDb.findOne({ _id: id });
+
+    const messages = conv.messages;
+    messages[index].likes++;
+
+    const conversation = await conversationDb.findOneAndUpdate(
+      { _id: id },
+      { $set: { messages } },
       { new: true }
     );
 

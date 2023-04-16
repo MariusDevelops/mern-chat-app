@@ -14,6 +14,7 @@ const {
   allConversations,
   getChat,
   sendMessage,
+  likeMessage,
 } = require('../controllers/general');
 const loggedIn = require('../middleware/loggedIn');
 
@@ -31,5 +32,6 @@ router.post('/newConversation', loggedIn, createConversation);
 router.post('/getConversations', loggedIn, allConversations);
 router.get('/chat/:id', getChat);
 router.post('/sendMessage', loggedIn, sendMessage);
+router.get('/like/:id/:index', likeMessage);
 
 module.exports = router;

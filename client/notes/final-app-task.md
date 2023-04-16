@@ -64,11 +64,11 @@ Conversations (link should show how many active conversations you have)
 [x]in this page you can see all conversations you having
 [x]when someone sends you new message it appears in this page as new conversation
 []user should be able to delete conversation (delete it for both users)
-[]in this page you can open one of conversations to send message (or open conversation in new route like /chat/:conversationId)
+[x]in this page you can open one of conversations to send message (or open conversation in new route like /chat/:conversationId)
 
 Chat Page
 
-[]In this page you can send messages
+[x]In this page you can send messages
 []Also in this page you can like messages which was send by other user (you can't like your own messages)
 []In chat when user sends message, his photo and his username should be displayed
 []Also each message sent should display time

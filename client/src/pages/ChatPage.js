@@ -44,6 +44,23 @@ const ChatPage = () => {
       });
   }, [id]);
 
+  const like = (index) => {
+    fetch(`http://localhost:3007/like/${id}/${index}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setConvo(data.conversation);
+      });
+  };
+
+  const convertTime = (stamp) => {
+    const date = new Date(stamp);
+
+    return (
+      date.getHours() + ':' + date.getMinutes() + ', ' + date.toDateString()
+    );
+  };
+
   return (
     <div className="d-flex j-center">
       <div className="container d-flex column chatWindow">
@@ -51,7 +68,21 @@ const ChatPage = () => {
           {convo?.messages.map((x, i) => (
             <div key={i} className="singleMessage">
               <h3>{x.username}</h3>
-              <div>{x.message}</div>
+              {/* <div>{x.message}</div> */}
+              <div>
+                {x.message.includes('http') ? (
+                  <img className="chatImage" src={x.message} alt="" />
+                ) : (
+                  x.message
+                )}
+              </div>
+              <b>{convertTime(x.time)}</b>
+              <div className="d-flex j-center">
+                <div>Likes: {x.likes}</div>
+                <button className="ml-3" onClick={() => like(i)}>
+                  Like
+                </button>
+              </div>
             </div>
           ))}
         </div>
