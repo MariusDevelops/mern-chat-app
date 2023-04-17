@@ -14,7 +14,7 @@ const Toolbar = () => {
   };
 
   return (
-    <div className="navigation-bar">
+    <div className="toolbar">
       <div>
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
@@ -30,7 +30,7 @@ const Toolbar = () => {
         )}
         {!isLoggedIn && <Link to="/login">Login</Link>}
       </div>
-      <div>{user?.username}</div>
+      <div>Welcome {user?.username}!</div>
     </div>
   );
 };

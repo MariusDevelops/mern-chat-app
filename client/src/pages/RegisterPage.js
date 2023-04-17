@@ -72,7 +72,7 @@ const RegisterPage = () => {
   }
 
   return (
-    <div className="log-reg-page">
+    <div className="page-layout">
       <input type="text" ref={nameRef} placeholder="username" />
       <input type="text" ref={passwordRef} placeholder="password" />
       <input type="text" ref={passwordTwoRe} placeholder="password 2" />
@@ -80,7 +80,7 @@ const RegisterPage = () => {
       <button onClick={auth}>Register</button>
 
       {errors.length > 0 && (
-        <div style={{ color: 'red' }}>
+        <div className="error-color">
           {errors.map((error, index) => (
             <p key={index}>{error}</p>
           ))}

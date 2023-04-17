@@ -71,7 +71,7 @@ Chat Page
 [x]In this page you can send messages
 []Also in this page you can like messages which was send by other user (you can't like your own messages)
 []In chat when user sends message, his photo and his username should be displayed
-[]Also each message sent should display time
+[x]Also each message sent should display time
 
 // TECHNOLOGIES TO USE
 [x]Rreact.js -, Redux, React Router

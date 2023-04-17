@@ -45,13 +45,13 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="log-reg-page">
+    <div className="page-layout">
       <input type="text" ref={nameRef} placeholder="username" />
       <input type="text" ref={passwordRef} placeholder="password" />
 
       <button onClick={auth}>Login</button>
-      {isSuccess === true && <p style={{ color: 'green' }}>Success</p>}
-      {isSuccess === false && <p style={{ color: 'red' }}>Wrong credentials</p>}
+      {isSuccess === true && <p className="success-color">Success</p>}
+      {isSuccess === false && <p className="error-color">Wrong credentials</p>}
     </div>
   );
 };

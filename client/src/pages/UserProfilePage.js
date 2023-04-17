@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 // import { setUser } from '../features/dataSlice';
 import { useSelector } from 'react-redux';
 
 const UserProfilePage = () => {
   const myUser = useSelector((state) => state.data.myUser);
+  const navigate = useNavigate();
 
   const { username } = useParams();
   const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ const UserProfilePage = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        navigate('/conversations');
       });
   };
 
