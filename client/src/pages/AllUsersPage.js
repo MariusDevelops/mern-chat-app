@@ -8,10 +8,14 @@ const UserCard = ({ user }) => {
   const { username, imageUrl } = user;
 
   return (
-    <Link to={`/user/${username}`}>
+    <Link to={`/user/${username}`} className="user-card-link">
       <div className="user-card">
-        <img src={imageUrl} alt={`${username}'s profile`} />
-        <h3>{username}</h3>
+        <img
+          src={imageUrl}
+          alt={`${username}'s profile`}
+          className="user-card-image"
+        />
+        <h3 className="user-card-username">{username}</h3>
       </div>
     </Link>
   );
@@ -33,8 +37,8 @@ const AllUsersPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h1>All Users</h1>
+    <div className="all-users-layout">
+      <h1 className="all-users-title">All Users</h1>
       <div className="user-list">
         {allUsers.map((user) => (
           <UserCard key={user.secret} user={user} />
