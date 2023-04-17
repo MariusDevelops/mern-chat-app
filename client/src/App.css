@@ -78,7 +78,7 @@ button {
   display: none;
 }
 
-/* Login - Register Pages */
+/* LOGIN/REGISTER PAGES */
 .page-layout {
   padding-top: 50px;
   width: 200px;
@@ -99,7 +99,6 @@ input[type='text'] {
   border: 1px solid #333;
 }
 
-/* Update text alignment to left */
 input[type='text'] {
   text-align: left;
 }
@@ -128,9 +127,56 @@ button:hover {
   color: #6c2791;
 }
 
-/* Profile */
-img {
-  height: 200px;
+/* PROFILE PAGE */
+.profile-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.profile-layout h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+.profile-layout img {
+  height: 300px;
+  border-radius: 25px;
+  margin: 0 auto 20px;
+}
+
+.profile-layout input[type='text'] {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.profile-layout button {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #2e1777;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-layout button:hover {
+  background-color: #452791;
 }
 
 /* Lecture CSS */

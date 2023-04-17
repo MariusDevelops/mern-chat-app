@@ -49,15 +49,17 @@ const ProfilePage = () => {
   };
 
   return (
-    <div>
+    <div class="profile-layout">
       <h1>Welcome to your profile, {currentUser.username}!</h1>
-      {imageUrl ? (
-        <img src={imageUrl} alt="User profile" />
-      ) : (
-        <p>Loading image...</p>
-      )}
-      <input type="text" value={imageUrl} onChange={handleImageUrlChange} />
-      <button onClick={handleImageUrlSubmit}>Update</button>
+      <div class="profile-content">
+        {imageUrl ? (
+          <img src={imageUrl} alt="User profile" />
+        ) : (
+          <p>Loading image...</p>
+        )}
+        <input type="text" value={imageUrl} onChange={handleImageUrlChange} />
+        <button onClick={handleImageUrlSubmit}>Update</button>
+      </div>
     </div>
   );
 };
