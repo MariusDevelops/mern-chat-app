@@ -48,9 +48,9 @@ const UserProfilePage = () => {
   };
 
   return (
-    <div>
+    <div className="user-profile-layout">
       <h1>{username}'s Profile</h1>
-      <h1>{user.secret} --- secretas</h1>
+      {/* <h1>{user.secret} --- secretas</h1> */}
       {user.imageUrl && (
         <img src={user.imageUrl} alt={`${username}'s profile`} />
       )}

@@ -114,6 +114,7 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
@@ -175,6 +176,7 @@ button:hover {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .profile-layout button:hover {
@@ -208,11 +210,11 @@ button:hover {
   padding: 20px;
   text-align: center;
   border-radius: 5px;
-  transition: background-color 0.3s ease-in-out; /* Add transition for smooth hover effect */
+  transition: background-color 0.3s ease-in-out;
 }
 
 .user-card:hover {
-  background-color: #452791; /* Change background color on hover */
+  background-color: #452791;
 }
 
 .user-card img {
@@ -231,102 +233,125 @@ a:link {
   text-decoration: none;
 }
 
-/* Lecture CSS */
-/* body {
-    padding: 50px;
-} */
-
-.d-flex {
+/* USER PROFILE PAGE */
+.user-profile-layout {
   display: flex;
-}
-
-.j-center {
-  justify-content: center;
-}
-
-.space-btw {
-  justify-content: space-between;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.column {
   flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  height: 100vh;
 }
 
-.grow1 {
-  flex: 1;
+.user-profile-layout h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.text-center {
-  text-align: center;
+.user-profile-layout img {
+  height: 300px;
+  border-radius: 25px;
+  margin: 0 auto 20px;
 }
 
-.grow2 {
-  flex: 2;
+.user-profile-layout p {
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.m-3 {
-  margin: 30px;
-}
-
-.mt-5 {
-  margin-top: 50px;
-}
-
-.ml-3 {
-  margin-left: 30px;
-}
-
-.p-3 {
-  padding: 30px;
-}
-
-.toolbar a {
-  margin-right: 20px;
-  margin-bottom: 50px;
-}
-
-.userCart {
+.user-profile-layout button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
   padding: 10px;
-  background-color: #eeeeee;
-  margin: 5px;
+  background-color: #2e1777;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.container {
-  width: 900px;
+.user-profile-layout button:hover {
+  background-color: #452791;
 }
 
+/* CONVERSATION PAGE */
+.convers-page {
+  height: 100vh;
+}
+
+/* SINGLE CONVERSATION CARD */
 .singleConvo {
-  margin-bottom: 10px;
+  cursor: pointer;
   padding: 10px;
-  background-color: #eeeeee;
+  background-color: #2e1777;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.chatWindow {
-  height: 600px;
+.singleConvo:hover {
+  background-color: #452791;
 }
 
-.chatWindow {
-  background-color: #f8f8f8;
+.singleConvo h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: whitesmoke;
 }
 
-.chatTable {
-  overflow: auto;
+.singleConvo h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+  color: whitesmoke;
+}
+
+/* ////////////////////////////////////////// */
+/* CHAT PAGE */
+.singleMessage {
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #2e1777;
+  border-bottom: 2px solid #14052f;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.singleMessage:hover {
+  background-color: #452791;
+}
+
+.single-message-line {
+  padding: 20px;
+}
+
+.chat-likes-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.chat-date {
+  color: #6c2791;
+}
+
+.chat-like-btn {
+  width: 100px;
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+.chatBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 50px auto;
 }
 
 .chatBottom input {
-  padding: 10px;
-  width: 90%;
-}
-
-.singleMessage {
-  padding: 5px;
-  background-color: #f1f1f1;
-  border-bottom: 2px solid black;
-}
-
-.chatImage {
-  height: 200px;
+  height: 50px;
 }

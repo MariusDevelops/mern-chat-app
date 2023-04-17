@@ -62,35 +62,37 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="d-flex j-center">
-      <div className="container d-flex column chatWindow">
-        <div className="grow1 chatTable">
-          {convo?.messages.map((x, i) => (
-            <div key={i} className="singleMessage">
-              <h3>{x.username}</h3>
-              {/* <div>{x.message}</div> */}
-              <div>
-                {x.message.includes('http') ? (
-                  <img className="chatImage" src={x.message} alt="" />
-                ) : (
-                  x.message
-                )}
+    <div className="chat">
+      <div>
+        {convo?.messages.map((x, i) => (
+          <div key={i} className="singleMessage">
+            <h3>{x.username}:</h3>
+            {/* <div>{x.message}</div> */}
+            <div className="single-message-line">
+              {x.message.includes('http') ? (
+                <img className="chatImage" src={x.message} alt="" />
+              ) : (
+                x.message
+              )}
+            </div>
+            <div className="chat-likes-container">
+              <div className="chat-date">
+                <b>{convertTime(x.time)}</b>
               </div>
-              <b>{convertTime(x.time)}</b>
-              <div className="d-flex j-center">
+              <div className="chat-likes-container">
                 <div>Likes: {x.likes}</div>
-                <button className="ml-3" onClick={() => like(i)}>
+                <button className="chat-like-btn" onClick={() => like(i)}>
                   Like
                 </button>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="chatBottom">
-          <input type="text" ref={messageRef} placeholder="message" />
-          <button onClick={sendMessage}>Send</button>
-        </div>
+      <div className="chatBottom">
+        <input type="text" ref={messageRef} placeholder="message" />
+        <button onClick={sendMessage}>Send</button>
       </div>
     </div>
   );

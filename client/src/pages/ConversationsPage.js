@@ -30,8 +30,8 @@ const ConversationPage = () => {
   }, [myUser.secret, myUser.username]);
 
   return (
-    <div className="d-flex j-center">
-      <div className="container">
+    <div className="convers-page">
+      <div>
         {convos.map((x, i) => (
           <SingleConversatonCard item={x} key={i} />
         ))}
