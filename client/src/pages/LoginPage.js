@@ -36,7 +36,6 @@ const LoginPage = () => {
               username: data.username,
             })
           );
-          // Navigate to login page
           navigate('/profile');
         } else {
           setIsSuccess(false);

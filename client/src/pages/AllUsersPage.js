@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setAllUsers } from '../features/dataSlice';
 import { Link } from 'react-router-dom';
 
-// UserCard component
 const UserCard = ({ user }) => {
   const { username, imageUrl } = user;
 
@@ -26,11 +25,9 @@ const AllUsersPage = () => {
   const allUsers = useSelector((state) => state.data.allUsers);
 
   useEffect(() => {
-    // Fetch all users from the server
     fetch('http://localhost:3007/allUsers')
       .then((response) => response.json())
       .then((data) => {
-        // Update the allUsers state in the Redux store
         dispatch(setAllUsers(data));
       })
       .catch((error) => console.log(error));

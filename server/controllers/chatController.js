@@ -2,10 +2,6 @@ const userDb = require('../schemas/userSchema');
 const conversationDb = require('../schemas/conversationSchema');
 
 module.exports = {
-  getAll: async (req, res) => {
-    const users = await userDb.find({}, { username: 1 });
-    res.send({ users });
-  },
   createConversation: async (req, res) => {
     const { from, to } = req.body;
 

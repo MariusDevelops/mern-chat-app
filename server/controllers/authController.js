@@ -12,7 +12,7 @@ module.exports = {
       secret: uid.uid(),
       username,
       password: hashedPass,
-      imageUrl, // Add the imageUrl field to the user object
+      imageUrl,
     });
 
     await userInDb.save();
@@ -37,7 +37,7 @@ module.exports = {
       message: '',
       secret: userExists.secret,
       username: userExists.username,
-      imageUrl: userExists.imageUrl, // Add the imageUrl field to the response object
+      imageUrl: userExists.imageUrl,
     });
   },
   updatePhoto: async (req, res) => {

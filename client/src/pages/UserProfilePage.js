@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-// import { setUser } from '../features/dataSlice';
 import { useSelector } from 'react-redux';
 
 const UserProfilePage = () => {

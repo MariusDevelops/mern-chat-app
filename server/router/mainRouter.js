@@ -9,13 +9,12 @@ const {
   getUserProfile,
 } = require('../controllers/authController');
 const {
-  // getAll,
   createConversation,
   allConversations,
   getChat,
   sendMessage,
   likeMessage,
-} = require('../controllers/general');
+} = require('../controllers/chatController');
 const loggedIn = require('../middleware/loggedIn');
 
 router.post('/register', register);
@@ -24,10 +23,9 @@ router.post('/login', login);
 router.post('/updatePhoto', updatePhoto);
 router.get('/getUserImage/:secret', getUserImage);
 
-router.get('/allUsers', getAllUsers); // add this route
+router.get('/allUsers', getAllUsers);
 router.get('/user/:username', getUserProfile);
 
-// router.get('/allUsers', getAll);
 router.post('/newConversation', loggedIn, createConversation);
 router.post('/getConversations', loggedIn, allConversations);
 router.get('/chat/:id', getChat);

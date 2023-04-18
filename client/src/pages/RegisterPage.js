@@ -65,7 +65,6 @@ const RegisterPage = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          // Navigate to login page
           navigate('/login');
         });
     }

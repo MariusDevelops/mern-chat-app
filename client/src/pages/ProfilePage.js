@@ -6,7 +6,6 @@ const ProfilePage = () => {
   const currentUser = useSelector((state) => state.data.currentUser);
 
   useEffect(() => {
-    // Fetch the current user's image URL from the server
     fetch(`http://localhost:3007/getUserImage/${currentUser.secret}`)
       .then((res) => res.json())
       .then((data) => {
@@ -38,7 +37,6 @@ const ProfilePage = () => {
       .then((data) => {
         if (data.success) {
           console.log('Image URL updated successfully!');
-          // alert('Image URL updated successfully!');
         } else {
           alert(data.message);
         }
